@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<!-- saved from url=(0088)http://localhost:8080/play?i=594807495053542798dd535c&e=Sam.Lucyk@gmail.com&t=eEjGMBrqgg -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="SimCase">
+
+    <title>SimCase - Optimization</title>
+
+    <!--<link rel="shortcut icon" href="../../assets/ico/favicon.ico">-->
+
+    <!-- Google Fonts -->
+    <link href="./SimCase - Optimization_files/css" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="./SimCase - Optimization_files/bootstrap.min.css" rel="stylesheet">
+
+    <!-- App base structure -->
+    <link href="./SimCase - Optimization_files/style.css" rel="stylesheet">
+
+    <!-- Icofont -->
+    <link href="./SimCase - Optimization_files/icofont.css" rel="stylesheet">
+
+    <!-- Custom styles for this app -->
+    <link href="./SimCase - Optimization_files/app.css" rel="stylesheet">
+    <!-- Base template styles for this app -->
+    <link href="./SimCase - Optimization_files/template-base.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body style="position:relative;">
+
+    <!-- Gamebox -->
+    <div id="appbox">
+
+
+        <!-- Navbar -->
+        <nav class="navbar-ds">
+            <ul class="nav-ds">
+                <li id="menu-btn-left" class="pull-left" data-toggle="modal" data-target="#quitModal" data-title="Are you sure you want to exit?" data-body="If you do, you will lose this game&#39;s progress.">
+                    <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                </li>
+                <li class="brand">
+                   <small class="fleft">Optimization</small>
+                   <span><img id="nav-logo" src="./SimCase - Optimization_files/icon.png" width="30" alt=""></span>
+                   <small class="fright">Levels</small>
+                </li>
+                <li id="menu-btn-right" class="pull-right">
+                    <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
+                </li>
+            </ul>
+        </nav>
+
+
+        <!-- ***************************** -->
+        <!-- ******** GAME SCREENS ******* -->
+        <!-- ***************************** -->
+
+        <!-- Screen 1 - WALKTHROUGH -->
+        <div id="walkthrough" class="screen current initial">
+
+            <div class="container mt45">
+
+                <img class="mt20" src="./SimCase - Optimization_files/cyber_monday_banner.png" alt="Cyber Monday Sale" style="
+    min-width: 100%;
+">
+                
+                <div class="mt20 padd10 col-xs-12 col-md-10 col-md-offset-1 text-left">
+                    The holiday season in the U.S. is almost here and you are preparing for online sales for Cyber Monday on your online e-commerce company, Nile.com.
+                </div>
+                <div class="padd10 col-xs-12 col-md-10 col-md-offset-1 text-left">
+                    <strong>Role:</strong> You are a Product Managager and are responsible for the profits and losses of a number of sales categories. 
+                    Your decisions on pricing and shipping costs will directly affect your overall profit.
+                </div>
+                <div class="padd10 col-xs-12 col-md-10 col-md-offset-1 text-left">
+                    <strong>Learning Objectives:</strong> 
+                    <ol>
+                        <li>Derive a power function and identify an optimum</li>
+                        <li>Derive exponential functions and identify an optimum</li>
+                        <li>Derive exponential functions and identify an optimum</li>
+                    </ol>
+                    <div style="text-align:center">
+                        <img src="./SimCase - Optimization_files/walkthrough_graph.png" alt="graph">
+                    </div>
+                </div>
+                
+                <div class="mt20 col-xs-12 col-sm-8 col-sm-offset-2 center">
+                    <span id="begin" class="btn btn-success btn-lg">Cyber Monday Sale Begin
+                </span></div>
+
+
+            </div>
+        </div>
+        
+        <!-- Screen 2 - ITEM TYPE SELECTION -->
+        <div id="item-type-selection" class="screen">
+
+            <div class="container mt45">
+
+                <div class="mt20 padd10 col-xs-12 col-md-10 col-md-offset-1 text-left">
+                    <strong>Goal:</strong> Maximize profits within each of the below categories. In order to do so you will be asked to review your inventory and select:
+                    <ol>
+                        <li>The item that will produce the most revenue</li>
+                        <li>The shipping option that will provide the lowerst cost</li>
+                    </ol>
+                    Keep in mind that the profit you obtain will be shown on a leaderboard at the end of the game! Best of luck to you.
+                </div>
+                
+                <div id="item-type-options" class="col-xs-12 col-md-10 col-md-offset-1">
+                    <div class="padd10 row mt20">
+                        <div class="col-xs-4">
+                            <img id="retail-icon" class="item-icon" src="./SimCase - Optimization_files/retail_icon.png">
+                        </div>
+                        <div class="col-xs-6">
+                            <span id="retail" class="mt20 btn btn-success btn-lg btn-block">Retail</span>
+                        </div>
+                    </div>
+                    <div class="padd10 row">
+                        <div class="col-xs-4">
+                            <img id="kitchenware-icon" class="item-icon" src="./SimCase - Optimization_files/kitchenware_icon.png">
+                        </div>
+                        <div class="col-xs-6">
+                            <span id="kitchenware" class="mt20 btn btn-success btn-lg btn-block">Kitchenware</span>
+                        </div>
+                    </div>
+                    <div class="padd10 row">
+                        <div class="col-xs-4">
+                            <img id="electronics-icon" class="item-icon" src="./SimCase - Optimization_files/electronics_icon.png">
+                        </div>
+                        <div class="col-xs-6">
+                            <span id="electronics" class="mt20 btn btn-success btn-lg btn-block">Electronics</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <!-- Screen 3 - LEVEL SELECTION -->
+        <div id="level-selection" class="screen">
+
+            <div class="container mt45">
+                <h4 class="padd10">Click the icon to get started</h4>
+                
+                <div id="level-options">
+                    <div class="padd10 row level-row ">
+                        
+                        <div class="col-xs-4">
+                            <span class="icon-button active" id="revenue-start">
+                                <img src="./SimCase - Optimization_files/revenue_icon.png">
+                            </span>
+                            <h4 class="level-label">Revenue</h4>
+                            <img id="revenue-progress" class="progressbar" src="./SimCase - Optimization_files/level_progressbar.png">
+                        </div>
+                        
+                        <div class="col-sm-6 col-sm-offset-1 col-xs-8">
+                            <div class="text-left minipad bg-white">
+                                <h4 id="total-revenue">Calculate Net Revenue</h4>
+                                <hr class="no-margin">
+                                <div id="revenue-price" role="menuitem" tabindex="-1" href="#">Optimal Price:</div>
+                                <div id="revenue-units-sold" role="menuitem" tabindex="-1" href="#">Units Sold:</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="padd10 row level-row">
+                        <div class="col-xs-4">
+                            <span class="icon-button" id="cost-start">
+                                <img src="./SimCase - Optimization_files/cost_icon.png">
+                            </span>
+                            <h4 class="level-label">Costs</h4>
+                            <img id="cost-progress" class="progressbar" src="./SimCase - Optimization_files/level_progressbar.png">
+                        </div>
+                        <div class="col-sm-6 col-sm-offset-1 col-xs-8">
+                            <div class="text-left minipad bg-white">
+                                <h4 id="total-cost">Calculate Total Costs</h4>
+                                <hr class="no-margin">
+                                <div id="cost-per-unit" role="menuitem" tabindex="-1" href="#">Shipping Cost/Unit:</div>
+                                <div id="cost-units-sold" role="menuitem" tabindex="-1" href="#">Units Sold:</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="padd10 row level-row">
+                        <div class="col-xs-4">
+                            <span class="icon-button" id="profit-icon" style="cursor:default !important">
+                                <img src="./SimCase - Optimization_files/profit_icon.png">
+                            </span>
+                            <h4 class="level-label">Profit</h4>
+                        </div>
+                        <div id="profit-container" class="col-sm-6 col-sm-offset-1 col-xs-8">
+                            <div class="text-left minipad bg-white">
+                                <h4 id="total-profits">Calculate Net Revenue</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Screen 4 - REVENUE SELECTION -->
+        <div id="revenue-selection" class="screen">
+
+            <div class="container mt45">
+                
+                <div class="padd10 col-xs-12 text-left">
+                    <strong>What to do:</strong>
+                    <ol>
+                        <li>Determine which will drive the highest revenue by reviewing their revenue curves.</li>
+                        <li>Calculate the optimal price using what you know about derivatives.</li>
+                    </ol>
+                </div>
+                <div class="padd10 col-xs-12 text-left">
+                    You do not need to worry about Fixed Costs. They have been rolled up into the revenue formulas below.
+                </div>
+                
+                <!-- Container for the game items -->
+                <label class="mt10">Available Items</label>
+                <div class="minipad bg-white">
+                    <div id="items-grid" class="clearfix"></div>
+                </div>
+
+                <!-- Graph for each item -->
+                <label class="mt20">Revenue Curve: Selected Item</label>
+                <canvas id="graph" class="hide"></canvas>
+                <div id="chart_div"></div>
+
+                <label class="mt20">Revenue Function: Selected Item</label>
+                <div class="minipad bg-white">
+                    <!-- Item table -->
+                    <table class="table text-center" style="margin-bottom:0;">
+                       <thead>
+                          <tr><th class="text-center">f(p) = Revenue, where p is the price of the item</th>
+                       </tr></thead>
+                       <tbody>
+                           <tr>
+                               <td id="formula_val">--</td>
+                           </tr>
+                       </tbody>
+                    </table>
+                </div>
+
+                <p class="text-center mt20">
+                    <button id="confirm-item-selection" class="btn btn-success btn-lg">Confirm Selection</button>
+                </p>
+
+            </div>
+        </div>
+        
+        <!-- SCREEN-5 - SET PRICE -->
+        <div id="set-price" class="screen">
+            
+            <div class="container mt45">
+
+                <h4 class="mt20">Set the Optimal Price<img class="help" id="help-1" src="./SimCase - Optimization_files/help.png"></h4>
+               
+                <!-- Item table -->
+                <label class="mt10">Revenue Function</label>
+                <div class="minipad bg-white">
+                    <table class="table text-center" style="margin-bottom:0;">
+                       <thead>
+                           <tr><th class="text-center">f(p) = Revenue</th>
+                       </tr></thead>
+                       <tbody>
+                           <tr>
+                               <td id="s2_formula_val">intercept * price<sup>2</sup> + slope * price</td>
+                           </tr>
+                       </tbody>
+                    </table>
+                </div>
+                
+                <table class="table text-center" style="margin-bottom:0;">
+                   <thead>
+                       <tr><th>Common Functions</th>
+                       <th class="text-center">Function</th>
+                       <th class="text-center">Constant</th>
+                   </tr></thead>
+                   <tbody>
+                       <tr>
+                           <td>Constant</td>
+                           <td>c</td>
+                           <td>0</td>
+                       </tr>
+                   </tbody>
+                </table>
+
+                <label class="mt20">Calculate the Optimal Price<img class="help" id="help-2" src="./SimCase - Optimization_files/help.png"></label>
+                <div class="minipad bg-white">
+                    <div class="form form-inline">
+                      <div class="form-group" style="margin-bottom:0;">
+                        <label class="sr-only" for="calculation-price">Input Price: </label>
+                        <div class="input-group">
+                          <input type="text" class="form-control input-lg" id="calculation-price" placeholder="Optimal Price">
+                          <div class="input-group-addon">USD</div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+                <button id="confirm-revenue-calc" class="btn btn-success btn-lg mt20">Confirm Input</button>
+
+            </div>
+        </div>
+        
+        
+        <!-- SCREEN 6 - REVENUE RESULT -->
+        <div id="revenue-result" class="screen">
+
+            <div id="price" class="minipad text-center mt45" <h4="">You generated <strong id="final-revenue"></strong> in revenue.
+            </div>
+
+            <div class="container">
+                
+                <label class="mt20">Feedback: Calculation</label>
+                <div class="minipad bg-white">
+                    <table class="table text-center" style="margin-bottom:0;">
+                       <thead>
+                           <tr><th class="text-center">Optimal Price</th>
+                           <th class="text-center">Your Price</th>
+                           <th class="text-center">Result</th>
+                       </tr></thead>
+                       <tbody>
+                           <tr>
+                               <td id="result-rc-correct">-</td>
+                               <td id="result-rc-calculation">-</td>
+                               <td>
+                                   <span id="result-rcal-icon" class="glyphicon"></span>
+                                </td>
+                           </tr>
+                       </tbody>
+                    </table>
+                </div>
+                <div class="mt20 minipad bg-white">
+                    <table class="table text-center" style="margin-bottom:0;">
+                       <thead>
+                           <tr><th class="text-center"></th>
+                           <th class="text-center">Function</th>
+                           <th class="text-center">Result</th>
+                       </tr></thead>
+                       <tbody>
+                           <tr>
+                               <td><strong>Revenue</strong></td>
+                               <td id="rev-formula-result">-</td>
+                               <td id="rev-total-result">-</td>
+                           </tr>
+                           <tr>
+                               <td><strong>Units Sold</strong></td>
+                               <td>f(p)/p</td>
+                               <td id="units-total-result">-</td>
+                           </tr>
+                       </tbody>
+                    </table>
+                </div>
+                
+                <label class="mt20">Feedback: Item Selection</label>
+                <div class="minipad bg-white">
+                    <div id="result-item-grid" class="clearfix">
+                    </div>
+                </div>
+                
+                <label class="mt20">Revenue Curve: Selected Item</label>
+                <div id="rev_result_chart_div"></div>
+                
+                <!-- Buttons -->
+                <div class="row mt20 mb20 center">
+                    <a href="http://localhost:8080/play?i=594807495053542798dd535c&amp;e=Sam.Lucyk@gmail.com&amp;t=eEjGMBrqgg#" id="finish-revenue" class="btn btn-success btn-lg mt20">Finish Revenue</a>
+                </div>
+
+            </div>
+
+        </div>
+    
+        <!-- SCREEN 7 - REVENUE RESPONSE -->
+        <div id="revenue-response" class="screen">
+            <div class="container mt45">
+                
+                <div class="minipad bg-white mt20">
+                    <h4>** New Information **</h4>
+                    <span id="response-info"></span>
+                </div>
+
+                <div class="minipad bg-white mt20">
+                    <span id="response-question"></span>
+                    <div id="revenue-response-buttons" class="mt20">
+                        <a href="http://localhost:8080/play?i=594807495053542798dd535c&amp;e=Sam.Lucyk@gmail.com&amp;t=eEjGMBrqgg#" id="rb1" class="response-button mlr10 btn btn-info btn-lg"></a>
+                        <a href="http://localhost:8080/play?i=594807495053542798dd535c&amp;e=Sam.Lucyk@gmail.com&amp;t=eEjGMBrqgg#" id="rb2" class="response-button mlr10 btn btn-info btn-lg"></a>
+                        <a href="http://localhost:8080/play?i=594807495053542798dd535c&amp;e=Sam.Lucyk@gmail.com&amp;t=eEjGMBrqgg#" id="rb3" class="response-button mlr10 btn btn-info btn-lg"></a>
+                    </div>
+                </div>
+
+                <div class="minipad bg-white mt20">
+                    <div><strong>What factors do you believe are important to your decision about pricing? (no idea is too out there! Bullet points are fine):</strong></div>
+                    <textarea class="form-control mt20" rows="5" id="revenue-response-text"></textarea>
+                </div>
+                
+                <div class="row mt20 mb20 center">
+                    <a href="http://localhost:8080/play?i=594807495053542798dd535c&amp;e=Sam.Lucyk@gmail.com&amp;t=eEjGMBrqgg#" id="finish-revenue-response" class="btn btn-success btn-lg mt20">Continue</a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Screen 8 - COST SELECTION -->
+        <div id="cost-selection" class="screen">
+
+            <div class="container mt45">
+                
+                <div class="padd10 col-xs-12 text-left">
+                    <strong>What to do:</strong> Those customers want their items! 
+                    You must now assess which shipping option will minimize cost:
+                    <ol>
+                        <li>Determine the number of days that wil minimize shipping costs.</li>
+                    </ol>
+                </div>
+                <canvas id="cost_graph" class="hide"></canvas>
+                <div class="col-xs-12" id="cost_chart_div"></div>
+                <div class="padd10 col-xs-12">
+                    <h4>Set Optimal Cost from Cost Curve<img class="help" id="help-3" src="./SimCase - Optimization_files/help.png"></h4>
+                </div>
+                <div class="col-xs-12 minipad bg-white">
+                    <!-- Item table -->
+                    <table class="table text-center" style="margin-bottom:0;">
+                       <thead>
+                          <tr><th class="text-center">f(d) = Cost, where d is the # of days shipping will take</th>
+                       </tr></thead>
+                       <tbody>
+                           <tr>
+                               <td id="cost_formula_val">--</td>
+                           </tr>
+                       </tbody>
+                    </table>
+                    
+                </div>
+                <div class="padd10 col-xs-12">
+                    <h4>Calculate the Optimal # of days(d)<img class="help" id="help-4" src="./SimCase - Optimization_files/help.png"></h4>
+                </div>
+                
+                <div class="minipad bg-white col-xs-12">
+                    
+                    <div class="form form-inline">
+                      <div class="form-group" style="margin-bottom:0;">
+                        <div class="input-group">
+                          <input type="text" class="form-control input-lg" id="calculation-days" placeholder="Optimal # of days">
+                          <div class="input-group-addon">Days</div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+                <button id="confirm-cost-selection" class="mt20 btn btn-success btn-lg">Continue</button>
+            </div>
+        </div>
+    
+    
+        <!-- SCREEN 9 - COST RESULT -->
+        <div id="cost-result" class="screen">
+
+            <div class="container">
+                
+                <label class="mt20">Feedback: Price Calculation</label>
+                <div class="minipad bg-white">
+                    <table class="table text-center" style="margin-bottom:0;">
+                       <thead>
+                           <tr><th class="text-center">Optimal d</th>
+                           <th class="text-center">Your d</th>
+                           <th class="text-center">Result</th>
+                       </tr></thead>
+                       <tbody>
+                           <tr>
+                               <td id="result-cost-correct">-</td>
+                               <td id="result-cost-calculation">-</td>
+                               <td>
+                                   <span id="result-cost-icon" class="glyphicon"></span>
+                                </td>
+                           </tr>
+                       </tbody>
+                    </table>
+                </div>
+                <div class="mt20 minipad bg-white">
+                    <table class="table text-center" style="margin-bottom:0;">
+                       <thead>
+                           <tr><th class="text-center"></th>
+                           <th class="text-center">Function</th>
+                           <th class="text-center">Result</th>
+                       </tr></thead>
+                       <tbody>
+                           <tr>
+                               <td><strong>Total Unit Cost</strong></td>
+                               <td id="cost-formula-result">-</td>
+                               <td id="cost-unit-result">-</td>
+                           </tr>
+                       </tbody>
+                    </table>
+                </div>
+                
+                
+                <div class="mt20" id="cost_result_chart_div"></div>
+
+                <!-- Buttons -->
+                <div class="row mt20 mb20 center">
+                    <a href="http://localhost:8080/play?i=594807495053542798dd535c&amp;e=Sam.Lucyk@gmail.com&amp;t=eEjGMBrqgg#" id="finish-cost" class="btn btn-success btn-lg mt20">Calculate Profit</a>
+                </div>
+
+            </div>
+
+        </div>
+    
+        
+
+        <!-- ***************************** -->
+        <!-- ******** GAME SCREENS ******* -->
+        <!-- ***************************** -->
+
+        <!-- Screen 1 - Debrief -->
+        <div id="debrief-1" class="screen">
+                <div class="container-fluid mt45">
+                    
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs nav-justified mt10" role="tablist">
+                        <li role="presentation" class="active"><a href="http://localhost:8080/play?i=594807495053542798dd535c&amp;e=Sam.Lucyk@gmail.com&amp;t=eEjGMBrqgg#tab-breakdown" role="tab" data-toggle="tab">Breakdown</a></li>
+                        <li role="presentation"><a href="http://localhost:8080/play?i=594807495053542798dd535c&amp;e=Sam.Lucyk@gmail.com&amp;t=eEjGMBrqgg#tab-response" role="tab" data-toggle="tab">Free Response</a></li>
+                        <li role="presentation"><a href="http://localhost:8080/play?i=594807495053542798dd535c&amp;e=Sam.Lucyk@gmail.com&amp;t=eEjGMBrqgg#tab-leaderboard" role="tab" data-toggle="tab">Leaderboard</a></li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        
+                        <!-- Breakdown -->
+                        <div role="tabpanel" class="tab-pane active" id="tab-breakdown">
+                            
+                            <div class="col-xs-12">
+                                <div id="revenue-chart" class="mt20"></div>
+                                <img class="chart-help" id="help-5" src="./SimCase - Optimization_files/help.png">
+                            </div>
+                            <div class="col-xs-12">
+                                <div id="cost-chart" class="mt20"></div>
+                                <img class="chart-help" id="help-6" src="./SimCase - Optimization_files/help.png">
+                            </div>
+
+                        </div>
+                        
+                        <!-- Free Response -->
+                        <div role="tabpanel" class="tab-pane" id="tab-response">
+                            <ul class="nav nav-tabs nav-justified mt20" role="tablist" style="">
+                                <li role="presentation" class="active"><a id="retial-response-button" href="http://localhost:8080/play?i=594807495053542798dd535c&amp;e=Sam.Lucyk@gmail.com&amp;t=eEjGMBrqgg#retail-response-tab" role="tab" data-toggle="tab">Retail</a></li>
+                                <li role="presentation"><a href="http://localhost:8080/play?i=594807495053542798dd535c&amp;e=Sam.Lucyk@gmail.com&amp;t=eEjGMBrqgg#kitchenware-response-tab" role="tab" data-toggle="tab">Kitchenware</a></li>
+                                <li role="presentation"><a href="http://localhost:8080/play?i=594807495053542798dd535c&amp;e=Sam.Lucyk@gmail.com&amp;t=eEjGMBrqgg#electronics-response-tab" role="tab" data-toggle="tab">Electronics</a></li>
+                            </ul>
+                            <div class="tab-content mt20">
+                                <!-- Retail Free Response -->
+                                <div role="tabpanel" class="tab-pane active" id="retail-response-tab">
+                                    <div class="col-xs-12">
+                                        <div class="minipad bg-white">
+                                            <h4>Context:</h4>
+                                            <div id="retail-context">While reviewing competitor sites you see that the item you selected is being offered at a 10% discount to your optimal price! What do you do?</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <div id="retail-pie" class="highcharts-container mt20"></div>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <div class="minipad bg-white mt20">
+                                            <table class="result-table table table-bordered mt10">
+                                                <thead>
+                                                    <tr><th>Action</th>
+                                                    <th>Factors</th>
+                                                </tr></thead>
+                                                <tbody id="retail-factors">
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Kitchenware Free Response -->
+                                <div role="tabpanel" class="tab-pane" id="kitchenware-response-tab">
+                                    
+                                    <div class="col-xs-12">
+                                        <div class="minipad bg-white">
+                                            <h4>Context:</h4>
+                                            <div id="kitchenware-context">Recent user reviews for your kitchenware product are less than stellar.  About 25% of reviewers report broken or unusable items and the return shipping is wiping out much of your profit. What do you do?</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-xs-12">
+                                        <div id="kitchenware-pie" class="highcharts-container mt20"></div>
+                                    </div>
+                                    
+                                    <div class="col-xs-12">
+                                        <div class="minipad bg-white mt20">
+                                            <table class="result-table table table-bordered mt10">
+                                                <thead>
+                                                    <tr><th>Action</th>
+                                                    <th>Factors</th>
+                                                </tr></thead>
+                                                <tbody id="kitchenware-factors">
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Electronics Free Response -->
+                                <div role="tabpanel" class="tab-pane" id="electronics-response-tab">
+                                    <div class="col-xs-12">
+                                        <div class="minipad bg-white">
+                                            <h4>Context:</h4>
+                                            <div id="electronics-context">You get a call from your electronics manufacturer and unfortunately they can only deliver on 50% of your order. What do you do?</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <div id="electronics-pie" class="highcharts-container mt20"></div>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <div class="minipad bg-white mt20">
+                                            <table class="result-table table table-bordered mt10">
+                                                <thead>
+                                                    <tr><th>Action</th>
+                                                    <th>Factors</th>
+                                                </tr></thead>
+                                                <tbody id="electronics-factors">
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                    </div>
+                        <!-- Breakdown -->
+                        <div role="tabpanel" class="tab-pane" id="tab-leaderboard">
+                            
+                            <div class="col-xs-12">
+                                <img class="leaderboard-icon" src="./SimCase - Optimization_files/overall_icon.png">
+                                <h4>Overall Accuracy</h4>
+                                <table class="result-table table table-bordered mt10">
+                                    <tbody id="overall-leaders">
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                             <div class="col-xs-12">
+                                <img class="leaderboard-icon" src="./SimCase - Optimization_files/retail_icon.png">
+                                <h4>Total Profit: Retail</h4>
+                                <table class="result-table table table-bordered mt10">
+                                    <tbody id="retail-leaders">
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                             <div class="col-xs-12">
+                                <img class="leaderboard-icon" src="./SimCase - Optimization_files/kitchenware_icon.png">
+                                <h4>Total Profit: Kitchenware</h4>
+                                <table class="result-table table table-bordered mt10">
+                                    <tbody id="kitchenware-leaders">
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                             <div class="col-xs-12">
+                                <img class="leaderboard-icon" src="./SimCase - Optimization_files/electronics_icon.png">
+                                <h4>Total Profit: Electronics</h4>
+                                <table class="result-table table table-bordered mt10">
+                                    <tbody id="electronics-leaders">
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+
+                </div>
+        </div>
+        
+
+        <!-- ***************************** -->
+        <!-- ******* /GAME SCREENS ******* -->
+        <!-- ***************************** -->
+
+        <!-- Spinnign loader -->
+        <div id="loader" class="">
+            <div class="spinner"></div>
+        </div>
+
+        <!-- Quit Modal -->
+        <div class="modal fade" id="quitModal" tabindex="-1" role="dialog" aria-labelledby="quitModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="quitModalTitle"></h4>
+              </div>
+              <div id="quitModalBody" class="modal-body">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                <a href="javascript:window.location.href=appURL+&#39;menu&#39;" class="btn btn-danger">Exit</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Alert Modal -->
+        <div class="modal fade" id="alertModal" tabindex="-1" role="dialog" aria-labelledby="alertModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="alertModalTitle"></h4>
+              </div>
+              <div id="alertModalBody" class="modal-body">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Popup -->
+        <div id="popup"></div>
+
+        <!-- Pre-loaders -->
+        <span id="pl-splash-bottom"></span>
+
+    </div>
+
+   
+
+    <!-- Menu Panels -->
+    <div id="menutabs" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <h4 class="modal-title"></h4>
+          </div>
+          <div class="modal-body">
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Libraries -->
+    <script src="./SimCase - Optimization_files/socket.io.js"></script>
+    <script type="text/javascript" src="./SimCase - Optimization_files/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="./SimCase - Optimization_files/highcharts.js"></script>
+    <script type="text/javascript" src="./SimCase - Optimization_files/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./SimCase - Optimization_files/fastclick.js"></script>
+      
+    <!-- Objects & Helpers -->
+    <script type="text/javascript" src="./SimCase - Optimization_files/utils.js"></script>
+    <script type="text/javascript" src="./SimCase - Optimization_files/qappnav.js"></script>
+      
+    <!-- App specific -->  
+    <script type="text/javascript" src="./SimCase - Optimization_files/play.js"></script>
+    <script type="text/javascript" src="./SimCase - Optimization_files/debrief.js"></script>
+<script type="text/javascript" src="./SimCase - Optimization_files/debrief_utils.js"></script>
+    <script type="text/javascript" src="./SimCase - Optimization_files/game_utils.js"></script>
+
+    <!-- Inline Script -->
+    <script>
+        // Get the local API info
+        jQuery(document).ready(function(){
+            // API data: Request and then start the game
+            jQuery.ajax({
+                url: 'oauth_provider',
+                method: 'GET',
+                success: function( authdata ){
+
+                    var oauthData = authdata;
+                    console.log( oauthData );
+                    appinit({ io_domain: oauthData.io_domain, io_path: oauthData.io_path, site_url: oauthData.site_url });
+
+                }
+            });
+
+        });
+    </script>
+
+  
+
+</body></html>

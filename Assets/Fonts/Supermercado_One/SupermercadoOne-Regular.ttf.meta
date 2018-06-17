@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 9ad828ce6e16f43f8b1a758cc6029c59
+timeCreated: 1488341291
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Supermercado
+  fontNames:
+  - Supermercado
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
